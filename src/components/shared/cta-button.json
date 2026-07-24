@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_cta_buttons",
+  "info": {
+    "displayName": "CTA Button"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "OpenInNewTab": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

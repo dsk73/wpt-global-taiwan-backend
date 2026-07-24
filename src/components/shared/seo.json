@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "SEO"
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "richtext"
+    },
+    "CanonicalURL": {
+      "type": "string"
+    },
+    "OGImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Robots": {
+      "type": "enumeration",
+      "enum": [
+        "Primary"
+      ]
+    },
+    "Keywords": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
