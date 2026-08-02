@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "Social Link"
+  },
+  "options": {},
+  "attributes": {
+    "Platform": {
+      "type": "enumeration",
+      "enum": [
+        "LINE",
+        "Youtube",
+        "Instagram",
+        "Discord",
+        "Facebook",
+        "Telegram",
+        "X",
+        "TikTok",
+        "Threads",
+        "Website"
+      ]
+    },
+    "URL": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    },
+    "Active": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

@@ -802,6 +802,39 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCommunityPageCommunityPage extends Struct.SingleTypeSchema {
+  collectionName: 'community_pages';
+  info: {
+    displayName: 'Community Page';
+    pluralName: 'community-pages';
+    singularName: 'community-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    BottomDescription: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroDescription: Schema.Attribute.RichText;
+    HeroTitle: Schema.Attribute.String;
+    LINEButtonText: Schema.Attribute.String;
+    LINEButtonURL: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::community-page.community-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    SocialLink: Schema.Attribute.Component<'shared.social-link', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCommunityCommunity extends Struct.CollectionTypeSchema {
   collectionName: 'communities';
   info: {
@@ -2180,6 +2213,7 @@ declare module '@strapi/strapi' {
       'api::activity.activity': ApiActivityActivity;
       'api::brand-ambassador.brand-ambassador': ApiBrandAmbassadorBrandAmbassador;
       'api::category.category': ApiCategoryCategory;
+      'api::community-page.community-page': ApiCommunityPageCommunityPage;
       'api::community.community': ApiCommunityCommunity;
       'api::download-page.download-page': ApiDownloadPageDownloadPage;
       'api::faq.faq': ApiFaqFaq;

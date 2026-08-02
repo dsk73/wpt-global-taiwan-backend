@@ -27,6 +27,32 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_social_links';
+  info: {
+    displayName: 'Social Link';
+  };
+  attributes: {
+    Active: Schema.Attribute.Boolean;
+    DisplayOrder: Schema.Attribute.Integer;
+    Platform: Schema.Attribute.Enumeration<
+      [
+        'LINE',
+        'Youtube',
+        'Instagram',
+        'Discord',
+        'Facebook',
+        'Telegram',
+        'X',
+        'TikTok',
+        'Threads',
+        'Website',
+      ]
+    >;
+    URL: Schema.Attribute.String;
+  };
+}
+
 export interface SharedStep extends Struct.ComponentSchema {
   collectionName: 'components_shared_steps';
   info: {
@@ -44,6 +70,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.cta-button': SharedCtaButton;
       'shared.seo': SharedSeo;
+      'shared.social-link': SharedSocialLink;
       'shared.step': SharedStep;
     }
   }

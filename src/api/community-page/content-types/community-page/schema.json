@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "community_pages",
+  "info": {
+    "singularName": "community-page",
+    "pluralName": "community-pages",
+    "displayName": "Community Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroTitle": {
+      "type": "string"
+    },
+    "HeroDescription": {
+      "type": "richtext"
+    },
+    "LINEButtonText": {
+      "type": "string"
+    },
+    "LINEButtonURL": {
+      "type": "string"
+    },
+    "BottomDescription": {
+      "type": "richtext"
+    },
+    "SocialLink": {
+      "type": "component",
+      "component": "shared.social-link",
+      "repeatable": true
+    }
+  }
+}
