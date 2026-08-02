@@ -35,6 +35,7 @@ export interface SharedSocialLink extends Struct.ComponentSchema {
   attributes: {
     Active: Schema.Attribute.Boolean;
     DisplayOrder: Schema.Attribute.Integer;
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Platform: Schema.Attribute.Enumeration<
       [
         'LINE',

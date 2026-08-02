@@ -812,23 +812,57 @@ export interface ApiCommunityPageCommunityPage extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    BottomDescription: Schema.Attribute.RichText;
+    BottomDescription: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    HeroDescription: Schema.Attribute.RichText;
-    HeroTitle: Schema.Attribute.String;
-    LINEButtonText: Schema.Attribute.String;
-    LINEButtonURL: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    HeroDescription: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    HeroTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    LINEButtonText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    LINEButtonURL: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::community-page.community-page'
-    > &
-      Schema.Attribute.Private;
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    SocialLink: Schema.Attribute.Component<'shared.social-link', true>;
+    SocialLink: Schema.Attribute.Component<'shared.social-link', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
