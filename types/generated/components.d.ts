@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedCoreValues extends Struct.ComponentSchema {
+  collectionName: 'components_shared_core_values';
+  info: {
+    displayName: 'CoreValues';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCtaButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_cta_buttons';
   info: {
@@ -69,6 +80,7 @@ export interface SharedStep extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'shared.core-values': SharedCoreValues;
       'shared.cta-button': SharedCtaButton;
       'shared.seo': SharedSeo;
       'shared.social-link': SharedSocialLink;

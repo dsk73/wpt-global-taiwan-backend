@@ -38,7 +38,22 @@
         "audios"
       ]
     },
-    "Content": {
+    "IntroductionLogo": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IntroductionContent": {
       "type": "richtext",
       "pluginOptions": {
         "i18n": {
@@ -46,7 +61,30 @@
         }
       }
     },
-    "Mission": {
+    "GlobalImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "MissionTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MissionContent": {
       "type": "richtext",
       "pluginOptions": {
         "i18n": {
@@ -54,8 +92,54 @@
         }
       }
     },
-    "Vision": {
+    "MissionImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "VisionTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "VisionContent": {
       "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "VisionImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "CoreValuesTitle": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -63,12 +147,14 @@
       }
     },
     "CoreValues": {
-      "type": "richtext",
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "shared.core-values",
+      "repeatable": true
     },
     "SEO": {
       "type": "component",
