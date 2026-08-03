@@ -1889,6 +1889,12 @@ export interface ApiTeachingGuideTeachingGuide
           localized: true;
         };
       }>;
+    GuideSections: Schema.Attribute.Component<'shared.guide-section', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     GuideType: Schema.Attribute.Enumeration<
       [
         'Download',
