@@ -23,6 +23,18 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGuideSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_guide_sections';
+  info: {
+    displayName: 'Guide Section';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -82,6 +94,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.core-values': SharedCoreValues;
       'shared.cta-button': SharedCtaButton;
+      'shared.guide-section': SharedGuideSection;
       'shared.seo': SharedSeo;
       'shared.social-link': SharedSocialLink;
       'shared.step': SharedStep;
