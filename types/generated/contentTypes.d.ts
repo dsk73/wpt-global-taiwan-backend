@@ -1831,7 +1831,7 @@ export interface ApiTeachingCenterPageTeachingCenterPage
       'api::teaching-center-page.teaching-center-page'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    SEO: Schema.Attribute.Component<'shared.social-link', false> &
+    SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1915,12 +1915,6 @@ export interface ApiTeachingGuideTeachingGuide
       'api::teaching-guide.teaching-guide'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    SEO: Schema.Attribute.Component<'shared.seo', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     Slug: Schema.Attribute.UID<'Title'>;
     Summary: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{

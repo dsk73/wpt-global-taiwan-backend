@@ -54,7 +54,7 @@
           "localized": true
         }
       },
-      "component": "shared.social-link",
+      "component": "shared.seo",
       "repeatable": false
     }
   }
