@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_component_promotion_benefits",
+  "info": {
+    "displayName": "Promotion Benefit"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

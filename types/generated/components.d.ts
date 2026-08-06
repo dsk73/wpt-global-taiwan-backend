@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedComponentPromotionBenefit
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_component_promotion_benefits';
+  info: {
+    displayName: 'Promotion Benefit';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCoreValues extends Struct.ComponentSchema {
   collectionName: 'components_shared_core_values';
   info: {
@@ -92,6 +105,7 @@ export interface SharedStep extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'shared.component-promotion-benefit': SharedComponentPromotionBenefit;
       'shared.core-values': SharedCoreValues;
       'shared.cta-button': SharedCtaButton;
       'shared.guide-section': SharedGuideSection;

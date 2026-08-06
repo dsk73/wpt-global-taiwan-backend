@@ -1177,6 +1177,83 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHeroPromotionCardHeroPromotionCard
+  extends Struct.SingleTypeSchema {
+  collectionName: 'hero_promotion_cards';
+  info: {
+    displayName: 'Hero Promotion Card';
+    pluralName: 'hero-promotion-cards';
+    singularName: 'hero-promotion-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Badge: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Benefits: Schema.Attribute.Component<
+      'shared.component-promotion-benefit',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    CardTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    CountdownText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-promotion-card.hero-promotion-card'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    ReferralCode: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ReferralURL: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ShowCountdown: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
   collectionName: 'hero_slides';
   info: {
@@ -2468,6 +2545,7 @@ declare module '@strapi/strapi' {
       'api::community.community': ApiCommunityCommunity;
       'api::download-page.download-page': ApiDownloadPageDownloadPage;
       'api::faq.faq': ApiFaqFaq;
+      'api::hero-promotion-card.hero-promotion-card': ApiHeroPromotionCardHeroPromotionCard;
       'api::hero-slide.hero-slide': ApiHeroSlideHeroSlide;
       'api::homepage-setting.homepage-setting': ApiHomepageSettingHomepageSetting;
       'api::payment-method.payment-method': ApiPaymentMethodPaymentMethod;
