@@ -60,12 +60,6 @@
       "relation": "oneToMany",
       "target": "api::activity.activity",
       "mappedBy": "category"
-    },
-    "faqs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::faq.faq",
-      "mappedBy": "category"
     }
   }
 }

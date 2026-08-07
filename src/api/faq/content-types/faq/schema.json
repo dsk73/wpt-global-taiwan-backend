@@ -31,12 +31,6 @@
         }
       }
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "faqs"
-    },
     "DisplayOrder": {
       "type": "integer",
       "pluginOptions": {
@@ -52,6 +46,23 @@
           "localized": true
         }
       }
+    },
+    "Category": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "enum": [
+        "my-account",
+        "wpt-global",
+        "kyc",
+        "deposits",
+        "withdrawals",
+        "account-security",
+        "promotions"
+      ]
     }
   }
 }
