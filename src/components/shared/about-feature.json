@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_about_features",
+  "info": {
+    "displayName": "AboutFeature"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonURL": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    },
+    "Active": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

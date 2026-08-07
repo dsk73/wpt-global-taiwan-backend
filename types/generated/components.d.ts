@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAboutFeature extends Struct.ComponentSchema {
+  collectionName: 'components_shared_about_features';
+  info: {
+    displayName: 'AboutFeature';
+  };
+  attributes: {
+    Active: Schema.Attribute.Boolean;
+    ButtonText: Schema.Attribute.String;
+    ButtonURL: Schema.Attribute.String;
+    Description: Schema.Attribute.RichText;
+    DisplayOrder: Schema.Attribute.Integer;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedComponentPromotionBenefit
   extends Struct.ComponentSchema {
   collectionName: 'components_shared_component_promotion_benefits';
@@ -18,10 +34,7 @@ export interface SharedCoreValues extends Struct.ComponentSchema {
   info: {
     displayName: 'CoreValues';
   };
-  attributes: {
-    Description: Schema.Attribute.RichText;
-    Title: Schema.Attribute.String;
-  };
+  attributes: {};
 }
 
 export interface SharedCtaButton extends Struct.ComponentSchema {
@@ -105,6 +118,7 @@ export interface SharedStep extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'shared.about-feature': SharedAboutFeature;
       'shared.component-promotion-benefit': SharedComponentPromotionBenefit;
       'shared.core-values': SharedCoreValues;
       'shared.cta-button': SharedCtaButton;

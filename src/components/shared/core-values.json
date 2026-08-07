@@ -4,13 +4,6 @@
     "displayName": "CoreValues"
   },
   "options": {},
-  "attributes": {
-    "Title": {
-      "type": "string"
-    },
-    "Description": {
-      "type": "richtext"
-    }
-  },
+  "attributes": {},
   "config": {}
 }
