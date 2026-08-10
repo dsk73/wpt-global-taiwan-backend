@@ -23,14 +23,6 @@
         }
       }
     },
-    "HeroSubtitle": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "GuideSectionTitle": {
       "type": "string",
       "pluginOptions": {

@@ -49,18 +49,6 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedGuideSection extends Struct.ComponentSchema {
-  collectionName: 'components_shared_guide_sections';
-  info: {
-    displayName: 'Guide Section';
-  };
-  attributes: {
-    Description: Schema.Attribute.RichText;
-    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Title: Schema.Attribute.String;
-  };
-}
-
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -115,6 +103,32 @@ export interface SharedStep extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTeachingGuideSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teaching_guide_sections';
+  info: {
+    displayName: 'Teaching Guide Section';
+  };
+  attributes: {
+    Columns: Schema.Attribute.Integer;
+    DisplayOrder: Schema.Attribute.Integer;
+    Steps: Schema.Attribute.Component<'shared.teaching-guide-step', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTeachingGuideStep extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teaching_guide_steps';
+  info: {
+    displayName: 'Teaching Guide Step';
+  };
+  attributes: {
+    Content: Schema.Attribute.RichText;
+    DisplayOrder: Schema.Attribute.Integer;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    StepNumber: Schema.Attribute.Integer;
+  };
+}
+
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
@@ -122,10 +136,11 @@ declare module '@strapi/strapi' {
       'shared.component-promotion-benefit': SharedComponentPromotionBenefit;
       'shared.core-values': SharedCoreValues;
       'shared.cta-button': SharedCtaButton;
-      'shared.guide-section': SharedGuideSection;
       'shared.seo': SharedSeo;
       'shared.social-link': SharedSocialLink;
       'shared.step': SharedStep;
+      'shared.teaching-guide-section': SharedTeachingGuideSection;
+      'shared.teaching-guide-step': SharedTeachingGuideStep;
     }
   }
 }

@@ -1,14 +1,14 @@
 {
-  "collectionName": "components_shared_guide_sections",
+  "collectionName": "components_shared_teaching_guide_steps",
   "info": {
-    "displayName": "Guide Section"
+    "displayName": "Teaching Guide Step"
   },
   "options": {},
   "attributes": {
-    "Title": {
-      "type": "string"
+    "StepNumber": {
+      "type": "integer"
     },
-    "Description": {
+    "Content": {
       "type": "richtext"
     },
     "Image": {
@@ -20,6 +20,9 @@
         "videos",
         "audios"
       ]
+    },
+    "DisplayOrder": {
+      "type": "integer"
     }
   },
   "config": {}

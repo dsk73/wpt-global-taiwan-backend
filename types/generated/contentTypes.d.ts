@@ -1882,12 +1882,6 @@ export interface ApiTeachingCenterPageTeachingCenterPage
           localized: true;
         };
       }>;
-    HeroSubtitle: Schema.Attribute.RichText &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     HeroTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1929,56 +1923,10 @@ export interface ApiTeachingGuideTeachingGuide
     };
   };
   attributes: {
-    Active: Schema.Attribute.Boolean &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    BannerImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Content: Schema.Attribute.RichText &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    DisplayOrder: Schema.Attribute.Integer &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    GuideSections: Schema.Attribute.Component<'shared.guide-section', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    GuideType: Schema.Attribute.Enumeration<
-      [
-        'Download',
-        'Register',
-        'Deposit',
-        'Withdrawal',
-        'MultiCurrency',
-        'Verification',
-        'Bonus',
-        'Tournament',
-        'Security',
-        'FAQ',
-        'Other',
-      ]
-    > &
+    CTA: Schema.Attribute.Component<'shared.cta-button', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1990,13 +1938,16 @@ export interface ApiTeachingGuideTeachingGuide
       'api::teaching-guide.teaching-guide'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Slug: Schema.Attribute.UID<'Title'>;
-    Summary: Schema.Attribute.RichText &
+    Sections: Schema.Attribute.Component<
+      'shared.teaching-guide-section',
+      true
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    Slug: Schema.Attribute.UID<'Title'>;
     Thumbnail: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &

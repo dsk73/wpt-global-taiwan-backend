@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_teaching_guide_sections",
+  "info": {
+    "displayName": "Teaching Guide Section"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    },
+    "Columns": {
+      "type": "integer"
+    },
+    "Steps": {
+      "type": "component",
+      "component": "shared.teaching-guide-step",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

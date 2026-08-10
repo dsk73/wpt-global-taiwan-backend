@@ -27,22 +27,6 @@
       "type": "uid",
       "targetField": "Title"
     },
-    "Summary": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Content": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "Thumbnail": {
       "type": "media",
       "pluginOptions": {
@@ -58,67 +42,25 @@
         "audios"
       ]
     },
-    "BannerImage": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "DisplayOrder": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Active": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "GuideType": {
-      "type": "enumeration",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "enum": [
-        "Download",
-        "Register",
-        "Deposit",
-        "Withdrawal",
-        "MultiCurrency",
-        "Verification",
-        "Bonus",
-        "Tournament",
-        "Security",
-        "FAQ",
-        "Other"
-      ]
-    },
-    "GuideSections": {
+    "Sections": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.guide-section",
+      "component": "shared.teaching-guide-section",
       "repeatable": true
+    },
+    "CTA": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.cta-button",
+      "repeatable": false
     }
   }
 }
