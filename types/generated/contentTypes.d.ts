@@ -1317,18 +1317,6 @@ export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    SecondaryButtonText: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    SecondaryButtonURL: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

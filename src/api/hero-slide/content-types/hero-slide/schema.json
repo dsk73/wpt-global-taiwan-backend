@@ -85,22 +85,6 @@
         }
       }
     },
-    "SecondaryButtonText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "SecondaryButtonURL": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "DisplayOrder": {
       "type": "integer",
       "pluginOptions": {
