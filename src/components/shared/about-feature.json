@@ -21,12 +21,6 @@
         "audios"
       ]
     },
-    "ButtonText": {
-      "type": "string"
-    },
-    "ButtonURL": {
-      "type": "string"
-    },
     "DisplayOrder": {
       "type": "integer"
     },

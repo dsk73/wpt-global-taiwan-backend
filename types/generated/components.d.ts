@@ -7,8 +7,6 @@ export interface SharedAboutFeature extends Struct.ComponentSchema {
   };
   attributes: {
     Active: Schema.Attribute.Boolean;
-    ButtonText: Schema.Attribute.String;
-    ButtonURL: Schema.Attribute.String;
     Description: Schema.Attribute.RichText;
     DisplayOrder: Schema.Attribute.Integer;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
