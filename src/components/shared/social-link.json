@@ -38,6 +38,9 @@
         "videos",
         "audios"
       ]
+    },
+    "Label": {
+      "type": "string"
     }
   },
   "config": {}
