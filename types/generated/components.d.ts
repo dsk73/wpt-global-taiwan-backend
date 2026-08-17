@@ -72,20 +72,7 @@ export interface SharedSocialLink extends Struct.ComponentSchema {
     DisplayOrder: Schema.Attribute.Integer;
     Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Label: Schema.Attribute.String;
-    Platform: Schema.Attribute.Enumeration<
-      [
-        'LINE',
-        'Youtube',
-        'Instagram',
-        'Discord',
-        'Facebook',
-        'Telegram',
-        'X',
-        'TikTok',
-        'Threads',
-        'Website',
-      ]
-    >;
+    Platform: Schema.Attribute.String;
     URL: Schema.Attribute.String;
   };
 }
