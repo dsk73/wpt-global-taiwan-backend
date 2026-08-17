@@ -884,6 +884,14 @@ export interface ApiCommunityPageCommunityPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    LINEImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

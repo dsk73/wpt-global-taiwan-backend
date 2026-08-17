@@ -55,6 +55,21 @@
         }
       }
     },
+    "LINEImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "BottomDescription": {
       "type": "richtext",
       "pluginOptions": {
