@@ -39,7 +39,7 @@
         }
       }
     },
-    "ReferralURL": {
+    "CommunityButtonText": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -47,15 +47,7 @@
         }
       }
     },
-    "ShowCountdown": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "CountdownText": {
+    "CommunityButtonURL": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

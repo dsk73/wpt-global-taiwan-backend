@@ -1221,7 +1221,13 @@ export interface ApiHeroPromotionCardHeroPromotionCard
           localized: true;
         };
       }>;
-    CountdownText: Schema.Attribute.String &
+    CommunityButtonText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    CommunityButtonURL: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1237,18 +1243,6 @@ export interface ApiHeroPromotionCardHeroPromotionCard
     >;
     publishedAt: Schema.Attribute.DateTime;
     ReferralCode: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    ReferralURL: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    ShowCountdown: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
