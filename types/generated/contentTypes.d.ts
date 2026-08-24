@@ -1933,6 +1933,15 @@ export interface ApiTeachingGuideTeachingGuide
       'oneToMany',
       'api::teaching-guide.teaching-guide'
     >;
+    MediaSection: Schema.Attribute.Component<
+      'shared.teaching-guide-media',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     Sections: Schema.Attribute.Component<
       'shared.teaching-guide-section',

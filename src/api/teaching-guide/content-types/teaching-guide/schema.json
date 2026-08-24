@@ -61,6 +61,16 @@
       },
       "component": "shared.cta-button",
       "repeatable": false
+    },
+    "MediaSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.teaching-guide-media",
+      "repeatable": true
     }
   }
 }

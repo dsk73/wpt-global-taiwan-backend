@@ -89,6 +89,17 @@ export interface SharedStep extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTeachingGuideMedia extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teaching_guide_medias';
+  info: {
+    displayName: 'Teaching Guide Media';
+  };
+  attributes: {
+    Media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTeachingGuideSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_teaching_guide_sections';
   info: {
@@ -125,6 +136,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.social-link': SharedSocialLink;
       'shared.step': SharedStep;
+      'shared.teaching-guide-media': SharedTeachingGuideMedia;
       'shared.teaching-guide-section': SharedTeachingGuideSection;
       'shared.teaching-guide-step': SharedTeachingGuideStep;
     }

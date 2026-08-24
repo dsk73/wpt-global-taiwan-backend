@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_teaching_guide_medias",
+  "info": {
+    "displayName": "Teaching Guide Media"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
