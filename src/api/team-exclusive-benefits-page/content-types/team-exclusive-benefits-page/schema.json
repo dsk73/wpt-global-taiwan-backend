@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_exclusive_benefits_pages",
+  "info": {
+    "singularName": "team-exclusive-benefits-page",
+    "pluralName": "team-exclusive-benefits-pages",
+    "displayName": "Team Exclusive Benefits Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "CTAHeading": {
+      "type": "string"
+    },
+    "RegisterButtonLabel": {
+      "type": "string"
+    },
+    "RegisterButtonURL": {
+      "type": "string"
+    },
+    "LineButtonLabel": {
+      "type": "string"
+    },
+    "LineButtonURL": {
+      "type": "string"
+    },
+    "LineButtonOpenInNewTab": {
+      "type": "boolean"
+    },
+    "HeroBenefit1": {
+      "type": "string"
+    },
+    "HeroBenefit2": {
+      "type": "string"
+    },
+    "HeroBenefit3": {
+      "type": "string"
+    },
+    "HeroBenefit4": {
+      "type": "string"
+    },
+    "CTAImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

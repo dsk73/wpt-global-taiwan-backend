@@ -1973,6 +1973,84 @@ export interface ApiTeachingGuideTeachingGuide
   };
 }
 
+export interface ApiTeamExclusiveBenefitTeamExclusiveBenefit
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'team_exclusive_benefits';
+  info: {
+    displayName: 'TEAM EXCLUSIVE BENEFITS';
+    pluralName: 'team-exclusive-benefits';
+    singularName: 'team-exclusive-benefit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    DisplayOrder: Schema.Attribute.Integer;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-exclusive-benefit.team-exclusive-benefit'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    RedemptionContent: Schema.Attribute.RichText;
+    RedemptionTitle: Schema.Attribute.String;
+    StepNumber: Schema.Attribute.Integer;
+    Subtitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTeamExclusiveBenefitsPageTeamExclusiveBenefitsPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'team_exclusive_benefits_pages';
+  info: {
+    displayName: 'Team Exclusive Benefits Page';
+    pluralName: 'team-exclusive-benefits-pages';
+    singularName: 'team-exclusive-benefits-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CTAHeading: Schema.Attribute.String;
+    CTAImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    HeroBenefit1: Schema.Attribute.String;
+    HeroBenefit2: Schema.Attribute.String;
+    HeroBenefit3: Schema.Attribute.String;
+    HeroBenefit4: Schema.Attribute.String;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    LineButtonLabel: Schema.Attribute.String;
+    LineButtonOpenInNewTab: Schema.Attribute.Boolean;
+    LineButtonURL: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-exclusive-benefits-page.team-exclusive-benefits-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    RegisterButtonLabel: Schema.Attribute.String;
+    RegisterButtonURL: Schema.Attribute.String;
+    Subtitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2502,6 +2580,8 @@ declare module '@strapi/strapi' {
       'api::teaching-center-article.teaching-center-article': ApiTeachingCenterArticleTeachingCenterArticle;
       'api::teaching-center-page.teaching-center-page': ApiTeachingCenterPageTeachingCenterPage;
       'api::teaching-guide.teaching-guide': ApiTeachingGuideTeachingGuide;
+      'api::team-exclusive-benefit.team-exclusive-benefit': ApiTeamExclusiveBenefitTeamExclusiveBenefit;
+      'api::team-exclusive-benefits-page.team-exclusive-benefits-page': ApiTeamExclusiveBenefitsPageTeamExclusiveBenefitsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

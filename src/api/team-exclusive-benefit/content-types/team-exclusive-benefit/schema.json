@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_exclusive_benefits",
+  "info": {
+    "singularName": "team-exclusive-benefit",
+    "pluralName": "team-exclusive-benefits",
+    "displayName": "TEAM EXCLUSIVE BENEFITS"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StepNumber": {
+      "type": "integer"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "RedemptionTitle": {
+      "type": "string"
+    },
+    "RedemptionContent": {
+      "type": "richtext"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    }
+  }
+}
